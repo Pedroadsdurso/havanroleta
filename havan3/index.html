@@ -1,0 +1,299 @@
+<!DOCTYPE html><html lang="pt-Br"><!-- Mirrored from premiomaster2024.site/roleta/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 01 Jul 2024 21:46:28 GMT --><head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <title>Gire a Roleta!</title>
+
+	    <link rel="stylesheet" href="css/all.css" crossorigin="anonymous">
+	    <link rel="stylesheet" href="css/bootstrap.min.css">
+	    <link rel="stylesheet" href="css/style.css%2540v%253d1719672237.css">
+	    <script src="js/jquery-3.0.0.slim.min.js"></script>
+	    <script src="js/jquery.min.js"></script>
+	    <script src="js/bootstrap.min.js"></script>
+	    <script src="js/confetti.browser.min.js"></script>
+
+<script src="js/latest.js" async="" defer=""></script>
+
+<script type="text/javascript">
+    // var message="Desculpe, o clique com o botão direito foi desativado.";
+    // function clickIE() {if (document.all) {(message);return false;}}
+    // function clickNS(e) {if
+    // (document.layers||(document.getElementById&&!document.all)) {
+    //     if (e.which==2||e.which==3) {(message);return false;}}}
+    // if (document.layers)
+    // {document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;}
+    // else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;}
+    // document.oncontextmenu=new Function("return false")
+</script>
+
+<script>
+    document.onkeydown = function(e) {
+        if(event.keyCode == 123) {
+            return false;
+        }
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+            return false;
+        }
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+            return false;
+        }
+        if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
+            return false;
+        }
+    }
+</script>
+
+<script>
+    function disableselect(e) {
+        return false;
+    }
+
+    function reEnable() {
+        return true;
+    }
+
+    document.onselectstart = new Function("return false");
+
+    if (window.sidebar) {
+        document.onmousedown = disableselect;
+        document.onclick = reEnable;
+    }
+</script>
+
+
+<script type="text/javascript">
+//   if (!window.location.href.includes('oferta') && !navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|IEMobile)/) && window.innerWidth > 768) {
+//     window.location.href = 'https://premiomaster2024.site/oferta/';
+//   }
+</script>
+	</head>
+	
+	<body>
+	    <div id="loading-screen" style="display: none;">
+	        <div class="spinner-loading"></div>
+	    </div>
+
+		<div id="page-content">
+		  <section>
+		    <div class="cta">
+		      <h1>
+		        Gire a <b>Roleta</b> para ganhar o seu <b>Mega Desconto</b>!
+		      </h1>
+		    </div>
+		    <div class="roulette">
+		      <img src="https://premiomaster2024.ru/roleta/assets/img/iluminação-min.webp" id="roleta1">
+		      <div id="roleta2">
+		        <img src="images/roleta.png" class="spinner">
+		      </div>
+		      <img src="images/button-gire.png" id="roleta3" class="runSpin">
+		    </div>
+		    <div class="button-roulette">
+		      <button id="button-cta" class="runSpin">        
+		        GIRE PARA GANHAR
+		      </button>
+		    </div>
+		</section></div>
+
+		<div id="people" class="people">
+		  <img src="images/man6.jpg" id="people-img" alt="">
+		  <p style="text-align: center" id="people-p">João acabou de ganhar R$25</p>
+		</div>
+
+		<div id="overlay" class="overlay hide-me"></div>
+	    <div id="popup" class="popup hide-me">
+	        <div class="popup-content">
+	            <h2>Parabéns!</h2>
+	            <p>Você ganhou um prêmio <b>incrível</b>!</p>
+	            <button id="resgatar-premio" href="../resgatar/index.html">Resgatar seu Prêmio</button>
+	        </div>
+	    </div>
+    	
+    	<script>
+    		/* eslint-disable linebreak-style */
+
+			const animateSpin = () => {
+			  const roleta2 = document.querySelector('#roleta2');
+
+			  const roleta2Img = document.querySelector('#roleta2 img');
+			  if (roleta2) {
+			    // Removendo a classe 'spinner' existente
+			    roleta2Img.classList.remove('spinner');
+
+			    // Salvando o número aleatório em um cookie chamado 'animatedNumber'
+			    document.cookie = `animatedNumber=1;path=/;max-age=86400`; // O cookie expira em 1 dia
+
+			    // Construindo o nome da classe com o número aleatório
+			    const animatedClass = `wheel__spinner_animated`;
+
+			    // Adicionando a classe gerada ao elemento
+			    roleta2.classList.add(animatedClass);
+
+			    // Definindo um timeout para remover a classe após 4 segundos e fazer outras alterações na página
+			    setTimeout(() => {
+			        // Executar a animação de confetes
+			        confetti({
+			          particleCount: 100,
+			          spread: 70,
+			          origin: { y: 0.6 }
+			        });
+
+			        // Mostrar o overlay e o popup
+			        const overlay = document.getElementById('overlay');
+			        const popup = document.getElementById('popup');
+			        overlay.style.display = 'block';
+			        popup.style.display = 'block';
+
+                    // buttonCta.classList.add('hide-me');
+			    }, 10000);
+			  }
+			};
+
+			const addSpinAnimation = (element) => {
+			  element.addEventListener('click', () => {
+			    animateSpin();
+			    // Add redirection after 4 seconds
+			    setTimeout(() => {
+			      //window.location.href = '/questionario/';
+			    }, 10000);
+			  });
+			};
+
+			// Add event listener to all elements with the class .runSpin
+			document.querySelectorAll('.runSpin').forEach(addSpinAnimation);
+			(() => {
+			  const frases = [
+			    {
+			      frase: 'Pedro Oliveira acabou de ganhar R$300',
+			      imgSrc: 'assets/img/imgs-presentes/man1.jpg',
+			    },
+			    {
+			      frase: 'Ana Alves acabou de ganhar R$25',
+			      imgSrc: 'assets/img/imgs-presentes/woman1.jpg',
+			    },
+			    {
+			      frase: 'Fernanda Santos acabou de ganhar R$150',
+			      imgSrc: 'assets/img/imgs-presentes/woman2.jpg',
+			    },
+			    {
+			      frase: 'Bruno Souza acabou de ganhar R$300',
+			      imgSrc: 'assets/img/imgs-presentes/man2.jpg',
+			    },
+			    {
+			      frase: 'Fabrício Costa acabou de ganhar R$25',
+			      imgSrc: 'assets/img/imgs-presentes/man3.jpg',
+			    },
+			    {
+			      frase: 'Juliana Lima acabou de ganhar R$150',
+			      imgSrc: 'assets/img/imgs-presentes/woman3.jpg',
+			    },
+			    {
+			      frase: 'Yasmin Araújo acabou de ganhar R$300',
+			      imgSrc: 'assets/img/imgs-presentes/woman4.jpg',
+			    },
+			    {
+			      frase: 'Lucilene Silva acabou de ganhar R$25',
+			      imgSrc: 'assets/img/imgs-presentes/woman5.jpg',
+			    },
+			    {
+			      frase: 'Everaldo Rocha acabou de ganhar R$150',
+			      imgSrc: 'assets/img/imgs-presentes/man4.jpg',
+			    },
+			    {
+			      frase: 'Oswaldo Carvalho acabou de ganhar R$300',
+			      imgSrc: 'assets/img/imgs-presentes/man5.jpg',
+			    },
+			    {
+			      frase: 'João Pereira acabou de ganhar R$25',
+			      imgSrc: 'assets/img/imgs-presentes/man6.jpg',
+			    },
+			    {
+			      frase: 'Ariadiny Gomes acabou de ganhar R$150',
+			      imgSrc: 'assets/img/imgs-presentes/woman6.jpg',
+			    },
+			    {
+			      frase: 'Carla Ferreira acabou de ganhar R$300',
+			      imgSrc: 'assets/img/imgs-presentes/woman7.jpg',
+			    },
+			    {
+			      frase: 'Gabriela Vieira acabou de ganhar R$25',
+			      imgSrc: 'assets/img/imgs-presentes/woman8.jpg',
+			    },
+			    {
+			      frase: 'Wellington Martins acabou de ganhar R$150',
+			      imgSrc: 'assets/img/imgs-presentes/man7.jpg',
+			    },
+			    {
+			      frase: 'Iago Barbosa acabou de ganhar R$300',
+			      imgSrc: 'assets/img/imgs-presentes/man8.jpg',
+			    },
+			    {
+			      frase: 'Maicon Ramos acabou de ganhar R$25',
+			      imgSrc: 'assets/img/imgs-presentes/man9.jpg',
+			    },
+			    {
+			      frase: 'Vitória Castro acabou de ganhar R$150',
+			      imgSrc: 'assets/img/imgs-presentes/woman9.jpg',
+			    },
+			    {
+			      frase: 'Matheus Santos acabou de ganhar R$300',
+			      imgSrc: 'assets/img/imgs-presentes/man10.jpg',
+			    },
+			    {
+			      frase: 'Marta Rocha acabou de ganhar R$25',
+			      imgSrc: 'assets/img/imgs-presentes/woman10.jpeg',
+			    },
+			    {
+			      frase: 'Geraldo Nascimento acabou de ganhar R$300',
+			      imgSrc: 'assets/img/imgs-presentes/man11.jpeg',
+			    },
+			    {
+			      frase: 'Daniel Ribeiro acabou de ganhar R$25',
+			      imgSrc: 'assets/img/imgs-presentes/man12.jpeg',
+			    },
+			  ];
+
+			  window.addEventListener('DOMContentLoaded', () => {
+			    const contDiv = document.getElementById('people');
+			    const peopleFrase = document.getElementById('people-p');
+			    const peopleImg = document.querySelector('#people-img');
+			    setInterval(() => {
+			      const rand = Math.floor(Math.random() * frases.length);
+			      const { frase } = frases[rand];
+			      const { imgSrc } = frases[rand];
+			      peopleFrase.innerHTML = frase;
+			      peopleImg.src = imgSrc;
+			      contDiv.classList.toggle('display-off');
+			      contDiv.classList.remove('slide-animation');
+			      setTimeout(() => {
+			        contDiv.classList.toggle('display-off');
+			        contDiv.classList.add('slide-animation');
+			      }, 20);
+			    }, 2400);
+			  });
+			})();
+
+			// Função para obter todos os parâmetros da URL
+		    const getQueryParams = () => {
+		        const params = new URLSearchParams(window.location.search);
+		        return params.toString();
+		    };
+
+		    // Event listener for the resgatar button
+		    document.getElementById('resgatar-premio').addEventListener('click', () => {
+		        // Logic to redeem the prize
+		        const queryParams = getQueryParams();
+		        const baseUrl = '../resgatar/index.html';
+		        const redirectUrl = queryParams ? `${baseUrl}?${queryParams}` : baseUrl;
+		        window.location.href = redirectUrl;
+		    });
+
+	        window.addEventListener('load', function() {
+	            const loadingScreen = document.getElementById('loading-screen');
+	            loadingScreen.style.display = 'none';
+	        });
+    	</script>
+	    <script src="js/jstools.js"></script>
+	
+
+
+</body><!-- Mirrored from premiomaster2024.site/roleta/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 01 Jul 2024 21:46:32 GMT --></html>
