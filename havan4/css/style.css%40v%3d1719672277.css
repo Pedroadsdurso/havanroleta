@@ -1,0 +1,30 @@
+#page-thank-you {
+	background-color: #1348e2;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#page-thank-you img {
+    display: block;
+    margin: 0 auto;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.thumbnail {
+    width: 100%;
+    cursor: pointer;
+}
+
+.video {
+    display: none;
+    width: 100%;
+}
