@@ -1,0 +1,258 @@
+<!DOCTYPE html><html lang="pt-BR"><!-- Mirrored from premiomaster2024.site/questionario/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 01 Jul 2024 21:46:27 GMT --><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Questionario de Avaliação</title>
+    <link rel="stylesheet" href="css/style.css%2540v%253d1719672166.css">
+<script src="js/latest.js" async="" defer=""></script>
+
+
+<script type="text/javascript">
+    var message="Desculpe, o clique com o botão direito foi desativado.";
+    function clickIE() {if (document.all) {(message);return false;}}
+    function clickNS(e) {if
+    (document.layers||(document.getElementById&&!document.all)) {
+        if (e.which==2||e.which==3) {(message);return false;}}}
+    if (document.layers)
+    {document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;}
+    else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;}
+    document.oncontextmenu=new Function("return false")
+</script>
+
+<script>
+    document.onkeydown = function(e) {
+        if(event.keyCode == 123) {
+            return false;
+        }
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+            return false;
+        }
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+            return false;
+        }
+        if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
+            return false;
+        }
+    }
+</script>
+
+<script>
+    function disableselect(e) {
+        return false;
+    }
+
+    function reEnable() {
+        return true;
+    }
+
+    document.onselectstart = new Function("return false");
+
+    if (window.sidebar) {
+        document.onmousedown = disableselect;
+        document.onclick = reEnable;
+    }
+</script>
+
+
+<script type="text/javascript">
+//   if (!window.location.href.includes('oferta') && !navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|IEMobile)/) && window.innerWidth > 768) {
+//     window.location.href = 'https://premiomaster2024.site/oferta/';
+//   }
+</script>
+</head>
+<body>
+    <div id="loading-screen" style="display: none;">
+        <div class="spinner"></div>
+    </div>
+
+    <header style="background-color: #1348e2;">
+        <img src="images/logo.webp" alt="Imagem no header" width="50%" align="center">
+
+        <br><br>
+        <section>
+            <!-- Formulário 1 -->
+            <div id="question1" class="questionnaire-container">
+                <h3 class="question-title">Como você avaliaria a experiência de compra na Havan em termos de facilidade de uso do site ou aplicativo?</h3>
+                <form id="form1" class="questionnaire-form" onsubmit="return submitForm(1)" action="https://premiomaster2024.site/questionario/index.html">
+                    <div class="question-options">
+                        <div class="question-option">
+                            <input type="radio" id="option1" name="question1" value="A solução proposta não funciona.">
+                            <label for="option1">Muito fácil</label>
+                        </div>
+                        <div class="question-option">
+                            <input type="radio" id="option2" name="question1" value="As informações são confusas.">
+                            <label for="option2">Fácil</label>
+                        </div>
+                        <div class="question-option">
+                            <input type="radio" id="option3" name="question1" value="Não estou de acordo com a política.">
+                            <label for="option3">Moderadamente fácil</label>
+                        </div>
+                        <div class="question-option">
+                            <input type="radio" id="option4" name="question1" value="Outro motivo.">
+                            <label for="option4">Difícil</label>
+                        </div>
+                    </div>
+                    <p class="error-message">Por favor, selecione uma opção.</p>
+                    <button type="submit" class="submit-button">Enviar</button>
+                </form>
+            </div>
+
+            <!-- Formulário 2 -->
+            <div id="question2" class="questionnaire-container hidden">
+                <h3 class="question-title">Qual é a sua opinião sobre a variedade de produtos disponíveis na Havan?</h3>
+                <form id="form2" class="questionnaire-form" onsubmit="return submitForm(2)" action="https://premiomaster2024.site/questionario/index.html">
+                    <div class="question-options">
+                        <div class="question-option">
+                            <input type="radio" id="option5" name="question2" value="Resposta 1.">
+                            <label for="option5">Excelente</label>
+                        </div>
+                        <div class="question-option">
+                            <input type="radio" id="option6" name="question2" value="Resposta 2.">
+                            <label for="option6">Boa</label>
+                        </div>
+                        <div class="question-option">
+                            <input type="radio" id="option7" name="question2" value="Resposta 3.">
+                            <label for="option7">Aceitável</label>
+                        </div>
+                        <div class="question-option">
+                            <input type="radio" id="option8" name="question2" value="Resposta 4.">
+                            <label for="option8">Insatisfatória</label>
+                        </div>
+                    </div>
+                    <p class="error-message">Por favor, selecione uma opção.</p>
+                    <button type="submit" class="submit-button">Enviar</button>
+                </form>
+            </div>
+
+            <!-- Formulário 3 -->
+            <div id="question3" class="questionnaire-container hidden">
+                <h3 class="question-title">Como você classificaria a eficiência da entrega dos produtos comprados na Havan?</h3>
+                <form id="form3" class="questionnaire-form" onsubmit="return submitForm(3)" action="https://premiomaster2024.site/questionario/index.html">
+                    <div class="question-options">
+                        <div class="question-option">
+                            <input type="radio" id="option9" name="question3" value="Resposta 1.">
+                            <label for="option9">Rápida</label>
+                        </div>
+                        <div class="question-option">
+                            <input type="radio" id="option10" name="question3" value="Resposta 2.">
+                            <label for="option10">Aceitável</label>
+                        </div>
+                        <div class="question-option">
+                            <input type="radio" id="option11" name="question3" value="Resposta 3.">
+                            <label for="option11">Lenta</label>
+                        </div>
+                        <div class="question-option">
+                            <input type="radio" id="option12" name="question3" value="Resposta 4.">
+                            <label for="option12">Muito lenta</label>
+                        </div>
+                    </div>
+                    <p class="error-message">Por favor, selecione uma opção.</p>
+                    <button type="submit" class="submit-button">Enviar</button>
+                </form>
+            </div>
+
+            <!-- Formulário 4 -->
+            <div id="question4" class="questionnaire-container hidden">
+                <h3 class="question-title">Você recomendaria o Havan a amigos e familiares?</h3>
+                <form id="form4" class="questionnaire-form" onsubmit="return submitForm(4)" action="https://premiomaster2024.site/questionario/index.html">
+                    <div class="question-options">
+                        <div class="question-option">
+                            <input type="radio" id="option13" name="question4" value="Resposta 1.">
+                            <label for="option13">Definitivamente sim</label>
+                        </div>
+                        <div class="question-option">
+                            <input type="radio" id="option14" name="question4" value="Resposta 2.">
+                            <label for="option14">Sim</label>
+                        </div>
+                        <div class="question-option">
+                            <input type="radio" id="option15" name="question4" value="Resposta 3.">
+                            <label for="option15">Não tenho certeza</label>
+                        </div>
+                        <div class="question-option">
+                            <input type="radio" id="option16" name="question4" value="Resposta 4.">
+                            <label for="option16">Não</label>
+                        </div>
+                    </div>
+                    <p class="error-message">Por favor, selecione uma opção.</p>
+                    <button type="submit" class="submit-button">Enviar</button>
+                </form>
+            </div>
+
+            <!-- Formulário 5 -->
+            <div id="question5" class="questionnaire-container hidden">
+                <h3 class="question-title">Como você avaliaria o serviço ao cliente oferecido pelo Havan?</h3>
+                <form id="form5" class="questionnaire-form" onsubmit="return submitForm(5)" action="https://premiomaster2024.site/questionario/index.html">
+                    <div class="question-options">
+                        <div class="question-option">
+                            <input type="radio" id="option17" name="question5" value="Resposta 1.">
+                            <label for="option17">Excelente</label>
+                        </div>
+                        <div class="question-option">
+                            <input type="radio" id="option18" name="question5" value="Resposta 2.">
+                            <label for="option18">Boa</label>
+                        </div>
+                        
+                        <div class="question-option">
+                            <input type="radio" id="option19" name="question5" value="Resposta 3.">
+                            <label for="option19">Aceitável</label>
+                        </div>
+                        <div class="question-option">
+                            <input type="radio" id="option20" name="question5" value="Resposta 4.">
+                            <label for="option20">Insatisfatória</label>  
+                        </div>
+                    </div>
+                    <p class="error-message">Por favor, selecione uma opção.</p>
+                    <button type="submit" class="submit-button" id="last-submit-button">Girar a Roleta!</button>
+                </form>
+
+            </div>
+            <script>
+                document.querySelectorAll('input[type="radio"]').forEach((radio) => {
+                    radio.addEventListener('change', function() {
+                        const form = this.closest('form');
+                        const submitButton = form.querySelector('.submit-button');
+                        submitButton.disabled = !form.querySelector('input[type="radio"]:checked');
+                        const errorMessage = form.querySelector('.error-message');
+                        if (form.querySelector('input[type="radio"]:checked')) {
+                            errorMessage.style.display = 'none';
+                        }
+                    });
+                });
+
+                function submitForm(questionNumber) {
+                    var form = document.getElementById('form' + questionNumber);
+                    var errorMessage = form.querySelector('.error-message');
+                    if (!form.querySelector('input[type="radio"]:checked')) {
+                        errorMessage.style.display = 'block';
+                        return false;
+                    }
+
+                    var currentQuestion = document.getElementById("question" + questionNumber);
+                    var nextQuestionNumber = questionNumber + 1;
+                    var nextQuestion = document.getElementById("question" + nextQuestionNumber);
+                    if (nextQuestion) {
+                        currentQuestion.classList.add("hidden");
+                        nextQuestion.classList.remove("hidden");
+                        return false; // Impede o envio do formulário
+                    }
+                }
+
+                document.getElementById('last-submit-button').addEventListener('click', function(event) {
+                    event.preventDefault(); // Evita o comportamento padrão de envio do formulário
+                    const queryParams = new URLSearchParams(window.location.search);
+                    const baseUrl = '../roleta/index.html';
+                    const redirectUrl = queryParams ? `${baseUrl}?${queryParams}` : baseUrl;
+                    window.location.href = redirectUrl;
+                });
+
+                window.addEventListener('load', function() {
+                    const loadingScreen = document.getElementById('loading-screen');
+                    loadingScreen.style.display = 'none';
+                });
+            </script>
+        </section>
+    </header>
+
+
+
+</body><!-- Mirrored from premiomaster2024.site/questionario/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 01 Jul 2024 21:46:28 GMT --></html>
