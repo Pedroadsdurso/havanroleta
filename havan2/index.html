@@ -240,7 +240,7 @@
                 document.getElementById('last-submit-button').addEventListener('click', function(event) {
                     event.preventDefault(); // Evita o comportamento padrão de envio do formulário
                     const queryParams = new URLSearchParams(window.location.search);
-                    const baseUrl = '../roleta/index.html';
+                    const baseUrl = '../havan3';
                     const redirectUrl = queryParams ? `${baseUrl}?${queryParams}` : baseUrl;
                     window.location.href = redirectUrl;
                 });
